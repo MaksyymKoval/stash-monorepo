@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "MakeupStash",
+    "slug": "makeupstash",
+    "scheme": "makeupstash",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.makeupstash.app",
+      "supportsTablet": false
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-image",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MakeupStash використовує фото, щоб додати косметику з фото столу й опублікувати образ.",
+          "cameraPermission": "MakeupStash використовує камеру, щоб сфотографувати косметику чи образ."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
