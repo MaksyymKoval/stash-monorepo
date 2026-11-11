@@ -1,0 +1,11 @@
+{
+  "name": "makeupstash",
+  "private": true,
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": "26.13.1"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r typecheck"
+  }
+}
