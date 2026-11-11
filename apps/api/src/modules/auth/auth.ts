@@ -1,17 +1,16 @@
 import { drizzleAdapter } from '@better-auth/drizzle-adapter';
 import { expo } from '@better-auth/expo';
+import { username as usernameSchema } from '@makeupstash/contracts';
 import { betterAuth } from 'better-auth';
 import { APIError } from 'better-auth/api';
 import { eq } from 'drizzle-orm';
-import { z } from 'zod';
 import { env } from '../../config/env.js';
 import { db } from '../../infra/db/db.js';
 import { profile } from './auth.schema.js';
 
 // Sign-up body: { email, password, name, username }. Better Auth passes unknown
 // fields through to ctx.body; the hooks below turn `username` into a profile row.
-const usernameSchema = z.string().regex(/^[a-z0-9_.]{3,30}$/);
-
+// The username rule lives in @makeupstash/contracts and is shared with the app.
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BETTER_AUTH_URL,

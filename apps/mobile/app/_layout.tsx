@@ -1,7 +1,9 @@
+import { QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, View } from 'react-native';
 import { authClient } from '@/lib/auth-client';
+import { queryClient } from '@/lib/query-client';
 import { theme } from '@/ui/theme';
 
 export default function RootLayout() {
@@ -16,7 +18,7 @@ export default function RootLayout() {
   }
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Protected guard={!!session}>
@@ -26,6 +28,6 @@ export default function RootLayout() {
           <Stack.Screen name="(auth)" />
         </Stack.Protected>
       </Stack>
-    </>
+    </QueryClientProvider>
   );
 }

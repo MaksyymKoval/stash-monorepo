@@ -1,3 +1,4 @@
+import type { MeResponse } from '@makeupstash/contracts';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import { db } from '../../infra/db/db.js';
@@ -6,7 +7,7 @@ import { profile } from './auth.schema.js';
 
 @Injectable()
 export class AuthService {
-  async me(user: AuthSession['user']) {
+  async me(user: AuthSession['user']): Promise<MeResponse> {
     const [row] = await db.select().from(profile).where(eq(profile.userId, user.id));
     if (!row) throw new NotFoundException({ code: 'PROFILE_NOT_FOUND', message: 'Profile not found' });
 
