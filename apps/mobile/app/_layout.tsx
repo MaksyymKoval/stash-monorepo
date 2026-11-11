@@ -21,10 +21,11 @@ export default function RootLayout() {
     <QueryClientProvider client={queryClient}>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Protected guard={!!session}>
+        {/* redirectTo: the (auth) group has no index, so the default "first available screen" would be an unmatched "/". */}
+        <Stack.Protected guard={!!session} redirectTo="/sign-in">
           <Stack.Screen name="(tabs)" />
         </Stack.Protected>
-        <Stack.Protected guard={!session}>
+        <Stack.Protected guard={!session} redirectTo="/">
           <Stack.Screen name="(auth)" />
         </Stack.Protected>
       </Stack>

@@ -218,14 +218,14 @@ docs/
 
 Готово, коли з iPhone можна зареєструватися, увійти, і `GET /v1/me` повертає профіль.
 
-- [ ] Монорепозиторій: pnpm workspaces, `.nvmrc`, спільний `tsconfig` зі strict
-- [ ] API: NestJS 12 на NodeAdapter, `env.ts`, `/v1/health`
-- [ ] Postgres і SeaweedFS у docker compose, Drizzle, перша міграція
-- [ ] Перенести інтеграцію Better Auth зі спайку та повторити перевірки a–g
-- [ ] Авторизація: email і пароль, guard, `@CurrentUser`, таблиця `profile`
-- [ ] Мобільний: Expo SDK 58, Expo Router, три порожні вкладки, екрани входу й реєстрації
-- [ ] `packages/contracts`, обгортка `fetch`, TanStack Query
-- [ ] Development build на iPhone
+- [x] Монорепозиторій: pnpm workspaces, `.nvmrc`, спільний `tsconfig` зі strict
+- [x] API: NestJS 12 на NodeAdapter, `env.ts`, `/v1/health`
+- [x] Postgres і SeaweedFS у docker compose, Drizzle, перша міграція
+- [x] Перенести інтеграцію Better Auth зі спайку та повторити перевірки a–g
+- [x] Авторизація: email і пароль, guard, `@CurrentUser`, таблиця `profile`
+- [x] Мобільний: Expo SDK 58, Expo Router, три порожні вкладки, екрани входу й реєстрації
+- [x] `packages/contracts`, обгортка `fetch`, TanStack Query
+- [x] Development build на iPhone
 - [ ] Каркас `docs/` і перші три рішення
 
 ### Етап 1. Косметичка: додати продукти без зусиль
