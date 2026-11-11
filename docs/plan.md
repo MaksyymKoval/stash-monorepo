@@ -226,7 +226,7 @@ docs/
 - [x] Мобільний: Expo SDK 58, Expo Router, три порожні вкладки, екрани входу й реєстрації
 - [x] `packages/contracts`, обгортка `fetch`, TanStack Query
 - [x] Development build на iPhone
-- [ ] Каркас `docs/` і перші три рішення
+- [x] Каркас `docs/` і перші три рішення
 
 ### Етап 1. Косметичка: додати продукти без зусиль
 
