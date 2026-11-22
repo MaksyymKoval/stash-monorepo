@@ -70,3 +70,7 @@ LAN IP Mac: `ipconfig getifaddr en0` (або `en1`). Якщо IP змінивс�
 ## Перевірки a–g
 
 Після оновлення NestJS чи Better Auth повторіть перевірки a–g з `decisions/0002-better-auth-node-adapter.md` (sign-up, sign-in, get-session, `/v1/me`, тіло запиту, `expo-origin`, sign-out).
+
+## MCP для AI-асистентів
+
+`.mcp.json` у корені під'єднує Figma MCP (`https://mcp.figma.com/mcp`, віддалений сервер Figma). Claude Code при першому запуску в репо спитає, чи довіряти серверу; далі `/mcp` → `figma` → вхід у Figma через браузер. Токени зберігаються локально, у репо нічого секретного немає.
