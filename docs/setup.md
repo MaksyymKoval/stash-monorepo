@@ -56,7 +56,7 @@ LAN IP Mac: `ipconfig getifaddr en0` (або `en1`). Якщо IP змінивс�
 ## Development build на iPhone
 
 1. Перший раз: `cd apps/mobile && npx expo prebuild -p ios` (папка `ios/` не комітиться, генерується з `app.json`).
-2. Зібрати й поставити: `npx expo run:ios --device` і вибрати телефон. Якщо Xcode пише «No profiles for 'com.makeupstash.app'», зберіть із дозволом створити профіль:
+2. Зібрати й поставити: `npx expo run:ios --device` і вибрати телефон. Якщо Xcode пише «No profiles for 'com.unlockyourstash.app'», зберіть із дозволом створити профіль:
    ```sh
    cd apps/mobile/ios && xcodebuild -workspace MakeupStash.xcworkspace -scheme MakeupStash \
      -configuration Debug -destination id=<UDID> -derivedDataPath build \

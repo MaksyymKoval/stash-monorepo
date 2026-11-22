@@ -8,7 +8,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "bundleIdentifier": "com.makeupstash.app",
+      "bundleIdentifier": "com.unlockyourstash.app",
       "appleTeamId": "3R47XS2WDC",
       "supportsTablet": false
     },
