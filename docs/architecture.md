@@ -38,7 +38,7 @@ apps/api/src/
 
 ## Шлях запиту
 
-**`/api/auth/*`** (sign-up, sign-in, get-session, sign-out): роутер NodeAdapter → `toNodeHandler(auth)` читає сирий потік тіла й завершує відповідь. Guard, фільтр, префікс `/v1` сюди не діють. Мобільний клієнт `@better-auth/expo` сам додає заголовок `expo-origin: makeupstash://`, який Better Auth звіряє з `trustedOrigins`.
+**`/api/auth/*`** (sign-up, sign-in, get-session, sign-out): роутер NodeAdapter → `toNodeHandler(auth)` читає сирий потік тіла й завершує відповідь. Guard, фільтр, префікс `/v1` сюди не діють. Мобільний клієнт `@better-auth/expo` сам додає заголовок `expo-origin: stash://`, який Better Auth звіряє з `trustedOrigins`.
 
 **`/v1/*`**: парсер JSON/urlencoded → глобальний `AuthGuard` (пропускає `@Public()`, інакше `auth.api.getSession()` з Postgres і кладе `user`/`session` у запит) → контролер → сервіс (Drizzle напряму) → відповідь. Будь-яка помилка проходить через `HttpExceptionFilter` і стає `{ code, message }`.
 

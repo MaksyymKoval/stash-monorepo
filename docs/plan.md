@@ -1,4 +1,4 @@
-# План MVP MakeupStash
+# План MVP Stash
 
 Актуально на 11.11.2026
 
@@ -37,7 +37,7 @@ MVP перевіряє три речі в такому порядку: чи ле
 Скелет містить лише ці папки; модулі `social` і `moderation` з'являються на етапах 4 і 5.
 
 ```
-makeupstash/
+stash/
 ├─ apps/
 │  ├─ api/
 │  │  ├─ src/
@@ -156,7 +156,7 @@ app/
 - **Базові компоненти.** П'ять-шість у `src/ui/`: Screen, Text, Button, Input, Card.
 - **Нативні модулі.** `expo-secure-store`, `expo-network`, `expo-image`, `expo-image-picker`, `expo-image-manipulator`; `expo-camera` для штрихкодів додається на етапі 1.
 - **Дозволи.** Тексти `NSCameraUsageDescription` і `NSPhotoLibraryUsageDescription` задаються в `app.json`.
-- **Ідентифікатори.** Bundle ID реєструється в акаунті Apple Developer до першого TestFlight. Схема застосунку (`makeupstash`) додається в `trustedOrigins` Better Auth.
+- **Ідентифікатори.** Bundle ID реєструється в акаунті Apple Developer до першого TestFlight. Схема застосунку (`stash`) додається в `trustedOrigins` Better Auth.
 
 ## Модель даних
 

@@ -1,4 +1,4 @@
-import type { MeResponse } from '@makeupstash/contracts';
+import type { MeResponse } from '@stash/contracts';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import { db } from '../../infra/db/db.js';

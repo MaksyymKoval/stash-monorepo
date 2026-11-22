@@ -1,4 +1,4 @@
-import { apiError } from '@makeupstash/contracts';
+import { apiError } from '@stash/contracts';
 import type { z } from 'zod';
 import { authClient } from './auth-client';
 import { env } from './env';
@@ -15,7 +15,7 @@ export class ApiError extends Error {
 
 /**
  * The only way the app talks to /v1: adds the Better Auth session cookie and
- * validates the response with a schema from @makeupstash/contracts.
+ * validates the response with a schema from @stash/contracts.
  */
 export async function api<S extends z.ZodType>(path: string, schema: S, init: RequestInit = {}): Promise<z.infer<S>> {
   const headers = new Headers(init.headers);

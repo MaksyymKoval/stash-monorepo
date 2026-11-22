@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "MakeupStash",
-    "slug": "makeupstash",
-    "scheme": "makeupstash",
+    "name": "Stash",
+    "slug": "stash",
+    "scheme": "stash",
     "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,8 +19,8 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "MakeupStash використовує фото, щоб додати косметику з фото столу й опублікувати образ.",
-          "cameraPermission": "MakeupStash використовує камеру, щоб сфотографувати косметику чи образ."
+          "photosPermission": "Stash використовує фото, щоб додати косметику з фото столу й опублікувати образ.",
+          "cameraPermission": "Stash використовує камеру, щоб сфотографувати косметику чи образ."
         }
       ]
     ],

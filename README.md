@@ -1,4 +1,4 @@
-# MakeupStash
+# Stash
 
 Косметичка, покрокові інструкції й спільнота, де видно, чим зроблено кожен образ. Монорепозиторій: `apps/api` (NestJS), `apps/mobile` (Expo), `packages/contracts` (zod).
 

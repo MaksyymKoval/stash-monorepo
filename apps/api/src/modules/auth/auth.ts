@@ -1,6 +1,6 @@
 import { drizzleAdapter } from '@better-auth/drizzle-adapter';
 import { expo } from '@better-auth/expo';
-import { username as usernameSchema } from '@makeupstash/contracts';
+import { username as usernameSchema } from '@stash/contracts';
 import { betterAuth } from 'better-auth';
 import { APIError } from 'better-auth/api';
 import { eq } from 'drizzle-orm';
@@ -10,7 +10,7 @@ import { profile } from './auth.schema.js';
 
 // Sign-up body: { email, password, name, username }. Better Auth passes unknown
 // fields through to ctx.body; the hooks below turn `username` into a profile row.
-// The username rule lives in @makeupstash/contracts and is shared with the app.
+// The username rule lives in @stash/contracts and is shared with the app.
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BETTER_AUTH_URL,
@@ -18,7 +18,7 @@ export const auth = betterAuth({
   emailAndPassword: { enabled: true },
   plugins: [expo()],
   // The mobile app's scheme. The expo() plugin also trusts exp:// when NODE_ENV=development.
-  trustedOrigins: ['makeupstash://'],
+  trustedOrigins: ['stash://'],
   databaseHooks: {
     user: {
       create: {

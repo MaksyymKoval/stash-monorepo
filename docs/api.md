@@ -12,7 +12,7 @@
 
 ### Better Auth (`/api/auth/*`)
 
-Обробляє `better-auth` 1.7.20; повний перелік — документація Better Auth. Потрібен заголовок `Origin` з `trustedOrigins` або `expo-origin: makeupstash://` (мобільний клієнт додає сам), інакше 403 `MISSING_OR_NULL_ORIGIN` / `INVALID_ORIGIN`.
+Обробляє `better-auth` 1.7.20; повний перелік — документація Better Auth. Потрібен заголовок `Origin` з `trustedOrigins` або `expo-origin: stash://` (мобільний клієнт додає сам), інакше 403 `MISSING_OR_NULL_ORIGIN` / `INVALID_ORIGIN`.
 
 | Метод і шлях | Тіло | Відповідь |
 | --- | --- | --- |

@@ -1,4 +1,4 @@
-import { meResponse } from '@makeupstash/contracts';
+import { meResponse } from '@stash/contracts';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { api } from '@/lib/api';
 import { authClient } from '@/lib/auth-client';

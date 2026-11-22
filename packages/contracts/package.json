@@ -1,5 +1,5 @@
 {
-  "name": "@makeupstash/contracts",
+  "name": "@stash/contracts",
   "private": true,
   "type": "module",
   "exports": {

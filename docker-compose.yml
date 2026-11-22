@@ -1,4 +1,4 @@
-name: makeupstash
+name: stash
 
 services:
   postgres:
@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: app
       POSTGRES_PASSWORD: app
-      POSTGRES_DB: makeupstash
+      POSTGRES_DB: stash
     ports:
       - "54320:5432"
     volumes:
@@ -17,8 +17,8 @@ services:
     image: chrislusf/seaweedfs:4.53
     command: server -dir=/data -s3 -s3.port=8333
     environment:
-      AWS_ACCESS_KEY_ID: makeupstash
-      AWS_SECRET_ACCESS_KEY: makeupstash-secret
+      AWS_ACCESS_KEY_ID: stash
+      AWS_SECRET_ACCESS_KEY: stash-secret
     ports:
       - "8333:8333"
     volumes:
