@@ -52,7 +52,7 @@ apps/mobile/
 └─ src/
    ├─ features/auth/     форми входу й реєстрації, useMe/useSignOut, ProfileCard
    ├─ lib/               env, auth-client, api (обгортка fetch), query-client
-   └─ ui/                theme.ts, strings.ts, Screen, Text, Button, Input, Card
+   └─ ui/                strings.ts (дизайн-фундаменту поки немає)
 ```
 
 Сесія: `authClient` (`expoClient` + `expo-secure-store`) зберігає cookie в Keychain, тому сесія переживає перезапуск. Запити до `/v1` ідуть лише через `src/lib/api.ts`, який додає `Cookie` з `authClient.getCookie()` і перевіряє відповідь схемою з `contracts`.

@@ -152,8 +152,8 @@ app/
 - **Фіча.** `src/features/<назва>/` містить `api.ts` (хуки запитів і мутацій) та компоненти цієї фічі.
 - **Мережа.** Одна обгортка над `fetch` у `src/lib/api.ts`: додає cookie сесії Better Auth і перевіряє відповідь схемою з `contracts`.
 - **Сесія.** `authClient` з плагіном `expoClient` і `expo-secure-store`; стан входу береться з `useSession`, окремого стору немає.
-- **Вигляд.** `StyleSheet` і один `theme.ts` з токенами. Бренд ще не готовий, тож заміна кольорів і шрифтів має бути правкою одного файлу.
-- **Базові компоненти.** П'ять-шість у `src/ui/`: Screen, Text, Button, Input, Card.
+- **Вигляд.** `StyleSheet` і один `theme.ts` з токенами. Старий фундамент видалено 23.11.2026; новий збирається з нуля на затвердженому бренді Stash.
+- **Базові компоненти.** П'ять-шість у `src/ui/`: Screen, Text, Button, Input, Card — з'являться разом із новим `theme.ts`.
 - **Нативні модулі.** `expo-secure-store`, `expo-network`, `expo-image`, `expo-image-picker`, `expo-image-manipulator`; `expo-camera` для штрихкодів додається на етапі 1.
 - **Дозволи.** Тексти `NSCameraUsageDescription` і `NSPhotoLibraryUsageDescription` задаються в `app.json`.
 - **Ідентифікатори.** Bundle ID реєструється в акаунті Apple Developer до першого TestFlight. Схема застосунку (`stash`) додається в `trustedOrigins` Better Auth.

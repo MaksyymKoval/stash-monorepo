@@ -1,10 +1,13 @@
+import { ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { ProfileCard } from '@/features/auth/ProfileCard';
-import { Screen } from '@/ui/Screen';
 
 export default function ProfileRoute() {
   return (
-    <Screen>
-      <ProfileCard />
-    </Screen>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScrollView>
+        <ProfileCard />
+      </ScrollView>
+    </SafeAreaView>
   );
 }

@@ -1,11 +1,11 @@
-import { Screen } from '@/ui/Screen';
+import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { strings } from '@/ui/strings';
-import { Text } from '@/ui/Text';
 
 export default function FeedRoute() {
   return (
-    <Screen>
-      <Text variant="muted">{strings.empty}</Text>
-    </Screen>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Text>{strings.empty}</Text>
+    </SafeAreaView>
   );
 }

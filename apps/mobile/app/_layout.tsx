@@ -4,15 +4,14 @@ import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, View } from 'react-native';
 import { authClient } from '@/lib/auth-client';
 import { queryClient } from '@/lib/query-client';
-import { theme } from '@/ui/theme';
 
 export default function RootLayout() {
   const { data: session, isPending } = authClient.useSession();
 
   if (isPending) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', backgroundColor: theme.color.background }}>
-        <ActivityIndicator color={theme.color.primary} />
+      <View style={{ flex: 1, justifyContent: 'center' }}>
+        <ActivityIndicator />
       </View>
     );
   }

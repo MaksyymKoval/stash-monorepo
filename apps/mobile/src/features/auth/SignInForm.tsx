@@ -1,9 +1,7 @@
 import { useState } from 'react';
+import { Button, Text, TextInput } from 'react-native';
 import { authClient } from '@/lib/auth-client';
-import { Button } from '@/ui/Button';
-import { Input } from '@/ui/Input';
 import { errorText, strings } from '@/ui/strings';
-import { Text } from '@/ui/Text';
 
 export function SignInForm({ onSwitch }: { onSwitch: () => void }) {
   const [email, setEmail] = useState('');
@@ -22,12 +20,12 @@ export function SignInForm({ onSwitch }: { onSwitch: () => void }) {
 
   return (
     <>
-      <Text variant="title">{strings.auth.signInTitle}</Text>
-      <Input label={strings.auth.email} value={email} onChangeText={setEmail} keyboardType="email-address" textContentType="emailAddress" />
-      <Input label={strings.auth.password} value={password} onChangeText={setPassword} secureTextEntry textContentType="password" />
-      {error ? <Text variant="error">{error}</Text> : null}
-      <Button title={strings.auth.signIn} onPress={submit} loading={loading} />
-      <Button title={strings.auth.toSignUp} onPress={onSwitch} variant="link" />
+      <Text>{strings.auth.signInTitle}</Text>
+      <TextInput placeholder={strings.auth.email} value={email} onChangeText={setEmail} autoCapitalize="none" autoCorrect={false} keyboardType="email-address" textContentType="emailAddress" />
+      <TextInput placeholder={strings.auth.password} value={password} onChangeText={setPassword} autoCapitalize="none" autoCorrect={false} secureTextEntry textContentType="password" />
+      {error ? <Text>{error}</Text> : null}
+      <Button title={strings.auth.signIn} onPress={submit} disabled={loading} />
+      <Button title={strings.auth.toSignUp} onPress={onSwitch} />
     </>
   );
 }

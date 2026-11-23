@@ -1,9 +1,7 @@
 import { useState } from 'react';
+import { Button, Text, TextInput } from 'react-native';
 import { authClient } from '@/lib/auth-client';
-import { Button } from '@/ui/Button';
-import { Input } from '@/ui/Input';
 import { errorText, strings } from '@/ui/strings';
-import { Text } from '@/ui/Text';
 
 export function SignUpForm({ onSwitch }: { onSwitch: () => void }) {
   const [username, setUsername] = useState('');
@@ -28,13 +26,14 @@ export function SignUpForm({ onSwitch }: { onSwitch: () => void }) {
 
   return (
     <>
-      <Text variant="title">{strings.auth.signUpTitle}</Text>
-      <Input label={strings.auth.username} hint={strings.auth.usernameHint} value={username} onChangeText={setUsername} textContentType="username" />
-      <Input label={strings.auth.email} value={email} onChangeText={setEmail} keyboardType="email-address" textContentType="emailAddress" />
-      <Input label={strings.auth.password} value={password} onChangeText={setPassword} secureTextEntry textContentType="newPassword" />
-      {error ? <Text variant="error">{error}</Text> : null}
-      <Button title={strings.auth.signUp} onPress={submit} loading={loading} />
-      <Button title={strings.auth.toSignIn} onPress={onSwitch} variant="link" />
+      <Text>{strings.auth.signUpTitle}</Text>
+      <TextInput placeholder={strings.auth.username} value={username} onChangeText={setUsername} autoCapitalize="none" autoCorrect={false} textContentType="username" />
+      <Text>{strings.auth.usernameHint}</Text>
+      <TextInput placeholder={strings.auth.email} value={email} onChangeText={setEmail} autoCapitalize="none" autoCorrect={false} keyboardType="email-address" textContentType="emailAddress" />
+      <TextInput placeholder={strings.auth.password} value={password} onChangeText={setPassword} autoCapitalize="none" autoCorrect={false} secureTextEntry textContentType="newPassword" />
+      {error ? <Text>{error}</Text> : null}
+      <Button title={strings.auth.signUp} onPress={submit} disabled={loading} />
+      <Button title={strings.auth.toSignIn} onPress={onSwitch} />
     </>
   );
 }
